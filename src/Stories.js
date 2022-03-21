@@ -19,7 +19,7 @@ class Stories extends React.Component {
     }
 
     getStories() {
-        fetch("http://photo-app-secured.herokuapp.com/api/stories/", {
+        fetch("https://photo-app-secured.herokuapp.com/api/stories/", {
             method: "GET",
             headers: getHeaders()
         })
