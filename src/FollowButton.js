@@ -25,7 +25,7 @@ class FollowButton extends React.Component {
             "user_id": userId
         };
         
-        fetch(`/api/following`, {
+        fetch(`https://photo-app-secured.herokuapp.com/api/following`, {
                 headers: getHeaders(),
                 method: 'POST',
                 body: JSON.stringify(postData)
@@ -42,7 +42,7 @@ class FollowButton extends React.Component {
 
 
     unfollowUser = (followingId, elem) => {
-        const deleteURL = `/api/following/${followingId}`;
+        const deleteURL = `https://photo-app-secured.herokuapp.com/api/following/${followingId}`;
         fetch(deleteURL, {
             method: "DELETE",
             headers: getHeaders()

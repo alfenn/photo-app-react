@@ -19,7 +19,7 @@ class App extends React.Component {
     }
 
     getUser() {
-        fetch('/api/profile/', {
+        fetch('https://photo-app-secured.herokuapp.com/api/profile/', {
             method: "GET",          // TODO: unnecessary?
             headers: getHeaders()
         }).then(response => response.json())

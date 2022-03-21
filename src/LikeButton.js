@@ -22,7 +22,7 @@ class LikeButton extends React.Component {
     }
 
     like() {
-        fetch(`/api/posts/${this.props.postId}/likes`, {
+        fetch(`https://photo-app-secured.herokuapp.com/api/posts/${this.props.postId}/likes`, {
                 headers: getHeaders(),
                 method: 'POST',
                 body: JSON.stringify({ post_id: this.props.postId })
@@ -35,7 +35,7 @@ class LikeButton extends React.Component {
     }
 
     unlike() {
-        fetch(`/api/posts/${this.props.postId}/likes/${this.props.likeId}`, {
+        fetch(`https://photo-app-secured.herokuapp.com/api/posts/${this.props.postId}/likes/${this.props.likeId}`, {
                 headers: getHeaders(),
                 method: 'DELETE'
             })
